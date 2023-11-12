@@ -133,7 +133,12 @@ def growthrate():
     df = pd.read_csv('data/final_growing_rates_rf.csv')
     with open('data/geo.json', 'r') as f:
         geoJSON = json.load(f)
-    m = folium.Map(location=[-37.81, 144.96], tiles="Stamen Terrain", zoom_start=10, color='white')
+    m = folium.Map(
+        location=[-37.81, 144.96], 
+        tiles="Stamen Terrain", 
+        attr="Map data: © OpenStreetMap contributors, CC-BY-SA, Tiles: © Stamen Design",
+        zoom_start=10
+    )
     svg_style = '<style>svg {background-color: rgb(255, 255, 255,0.5);}</style>'
     m.get_root().header.add_child(folium.Element(svg_style))
 
@@ -257,7 +262,12 @@ def liveability():
 
     with open('data/geo.json', 'r') as f:
         geoJSON = json.load(f)
-    m = folium.Map(location=[-37.81, 144.96], tiles="Stamen Terrain", zoom_start=10, color='white')
+    m = folium.Map(
+        location=[-37.81, 144.96], 
+        tiles="Stamen Terrain", 
+        attr="Map data: © OpenStreetMap contributors, CC-BY-SA, Tiles: © Stamen Design",
+        zoom_start=10
+    )
     svg_style = '<style>svg {background-color: rgb(255, 255, 255,0.5);}</style>'
     m.get_root().header.add_child(folium.Element(svg_style))
 
