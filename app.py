@@ -3,7 +3,7 @@
 from lib2to3.pgen2.pgen import DFAState
 import string
 import numpy as np
-from flask import Flask, request, render_template, json, jsonify
+from flask import Flask, request, render_template, json
 import pickle
 import os
 import pandas as pd
@@ -20,9 +20,9 @@ dname = os.path.dirname(abspath)
 os.chdir(dname)
 print(dname)
 
-model1 = pickle.load(open('../web/models/population_model.pkl', 'rb'))
-model2 = pickle.load(open('../web/models/crimecase_model.pkl', 'rb'))
-model3 = pickle.load(open('../web/models/income_model.pkl', 'rb'))
+model1 = pickle.load(open('models/population_model.pkl', 'rb'))
+model2 = pickle.load(open('models/crimecase_model.pkl', 'rb'))
+model3 = pickle.load(open('models/income_model.pkl', 'rb'))
 
 
 #Define the route to be home. 
